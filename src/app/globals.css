@@ -1,26 +1,160 @@
 @import "tailwindcss";
 
+@theme {
+  --color-bg: var(--color-bg);
+  --color-surface: var(--color-surface);
+  --color-surface-warm: var(--color-surface-warm);
+  --color-ink: var(--color-ink);
+  --color-ink-muted: var(--color-ink-muted);
+  --color-gold: var(--color-gold);
+  --color-gold-light: var(--color-gold-light);
+  --color-gold-deep: var(--color-gold-deep);
+  --color-border-custom: var(--color-border);
+  --color-shadow-custom: var(--color-shadow);
+
+  --font-display: var(--font-playfair-display);
+  --font-accent: var(--font-cormorant-garamond);
+  --font-sans: var(--font-inter);
+  --font-micro: var(--font-montserrat);
+
+  --transition-timing-function-premium: var(--ease-premium);
+  --transition-duration-fast: var(--duration-fast);
+  --transition-duration-base: var(--duration-base);
+  --transition-duration-slow: var(--duration-slow);
+  --transition-duration-hero: var(--duration-hero);
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Colors */
+  --color-bg: #F8F9FA;
+  --color-surface: #FFFFFF;
+  --color-surface-warm: #F3F1EC;
+  --color-ink: #1A1A1A;
+  --color-ink-muted: #5C5C5C;
+  --color-gold: #C5A880;
+  --color-gold-light: #DCC9A8;
+  --color-gold-deep: #A88456;
+  --color-border: rgba(26,26,26,0.08);
+  --color-shadow: rgba(26,26,26,0.06);
+
+  /* Typography Scale (Fluid) */
+  --text-h1: clamp(2.75rem, 6vw, 5.5rem);   /* hero headline */
+  --text-h2: clamp(2.25rem, 4vw, 3.75rem);  /* section headline */
+  --text-h3: clamp(1.5rem, 2.2vw, 2.25rem); /* card / sub-section */
+  --text-body-lg: clamp(1.0625rem, 1.2vw, 1.25rem);
+  --text-body: 1rem;
+  --text-caption: 0.875rem;
+  --text-micro: 0.8125rem;
+
+  /* Spacing Scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 48px;
+  --space-7: 64px;
+  --space-8: 96px;
+  --space-9: 128px;
+  --space-10: 160px;
+
+  /* Motion Curves */
+  --ease-premium: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 0.2s;
+  --duration-base: 0.45s;
+  --duration-slow: 0.9s;
+  --duration-hero: 1.4s;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Base resets & typography bindings */
+html, body {
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-inter), sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+
+
+/* Custom Cursor support - hide normal pointer only on desktop when custom cursor active */
+@media (hover: hover) and (pointer: fine) {
+  .custom-cursor-active {
+    cursor: none;
+  }
+  .custom-cursor-active a, 
+  .custom-cursor-active button,
+  .custom-cursor-active select,
+  .custom-cursor-active input,
+  .custom-cursor-active textarea,
+  .custom-cursor-active [role="button"] {
+    cursor: none;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Signature SVG path drawing animations */
+@keyframes vein-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.vein-line-path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: vein-draw 2.5s var(--ease-premium) forwards;
+}
+
+/* Shimmer gradient effect classes */
+.gold-shimmer-bg {
+  background: linear-gradient(
+    90deg, 
+    var(--color-gold) 0%, 
+    var(--color-gold-deep) 50%, 
+    var(--color-gold) 100%
+  );
+  background-size: 200% auto;
+}
+
+/* Hide fallback map labels for clean, desaturated editorial map representation */
+.desaturated-map {
+  filter: grayscale(1) contrast(1.1) brightness(0.95);
+  mix-blend-mode: multiply;
+}
+
+/* Text utility shortcuts for fluid scale variables in Tailwind */
+.text-clamp-h1 { font-size: var(--text-h1); line-height: 1.05; letter-spacing: -0.015em; font-family: var(--font-playfair-display), serif; }
+.text-clamp-h2 { font-size: var(--text-h2); line-height: 1.1; letter-spacing: -0.01em; font-family: var(--font-playfair-display), serif; }
+.text-clamp-h3 { font-size: var(--text-h3); line-height: 1.2; font-family: var(--font-playfair-display), serif; }
+.text-clamp-body-lg { font-size: var(--text-body-lg); line-height: 1.6; }
+.text-clamp-body { font-size: var(--text-body); line-height: 1.6; }
+.text-clamp-caption { font-size: var(--text-caption); line-height: 1.5; }
+.text-clamp-micro { font-size: var(--text-micro); line-height: 1.4; letter-spacing: 0.08em; text-transform: uppercase; font-family: var(--font-montserrat), sans-serif; }
+
+/* Section vertical spaces */
+.sec-py {
+  padding-top: var(--space-7);
+  padding-bottom: var(--space-7);
+}
+@media (min-width: 1024px) {
+  .sec-py {
+    padding-top: var(--space-9);
+    padding-bottom: var(--space-9);
+  }
+}
+.sec-py-lg {
+  padding-top: var(--space-8);
+  padding-bottom: var(--space-8);
+}
+@media (min-width: 1024px) {
+  .sec-py-lg {
+    padding-top: var(--space-10);
+    padding-bottom: var(--space-10);
+  }
+}
+
+/* Accessibility focus indicator style */
+*:focus-visible {
+  outline: 1px solid var(--color-gold);
+  outline-offset: 4px;
 }
