@@ -13,7 +13,7 @@ const MANIFESTO_SECTIONS = [
   },
   {
     quote: "Makrana marble built the Taj Mahal. We don't sell that history — we honor it, one slab at a time.",
-    image: "/images/stone_detail_vein.jpg",
+    image: "/images/makrana_white_1.jpg",
   },
   {
     quote: "Every block we select is chosen the way a sculptor chooses — not for what it costs, but for what it could become.",

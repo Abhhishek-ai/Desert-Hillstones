@@ -51,7 +51,7 @@ const COLLECTIONS = [
   {
     title: "Bathroom Vanities",
     category: "bathroom-vanities",
-    image: "/images/interior_calacatta_bath.jpg",
+    image: "/images/vanity_1.jpg",
     className: "lg:col-span-3 lg:h-[440px] h-[360px]",
   },
   {
@@ -66,17 +66,17 @@ const INSTALLATIONS = [
   {
     title: "A private villa in Amer Road",
     desc: "Makrana white marble floors, hand-finished bookmatched installation.",
-    image: "/images/interior_villa_floor.jpg",
+    image: "/images/visual_diary_1.png",
   },
   {
-    title: "Penthouse overlooking Central Park",
-    desc: "Slab kitchen island of Black Taurus granite with leathered details.",
-    image: "/images/interior_taurus_kitchen.jpg",
+    title: "A bespoke home temple installation",
+    desc: "Intricately carved pure white Makrana marble mandir with backlit jali panels.",
+    image: "/images/visual_diary_2.png",
   },
   {
-    title: "Luxury hospitality lounge bar",
-    desc: "Backlit Patagonia quartzite feature wall panel.",
-    image: "/images/interior_patagonia_bar.jpg",
+    title: "A luxury kitchen waterfall island",
+    desc: "Bespoke kitchen island crafted from exotic gold-veined premium granite.",
+    image: "/images/kitchen_granite.png",
   },
 ];
 
@@ -100,10 +100,10 @@ const REVIEWS = [
 ];
 
 const INSTAGRAM_POSTS = [
-  { image: "/images/interior_villa_floor.jpg", caption: "Symmetry in stone. Makrana floor installation." },
-  { image: "/images/interior_taurus_kitchen.jpg", caption: "Bold gestures. Black Taurus countertop details." },
-  { image: "/images/interior_patagonia_bar.jpg", caption: "Illuminating details. Backlit quartzite surfaces." },
-  { image: "/images/about_preview.jpg", caption: "Studio details. Exploring material palettes under sunlight." },
+  { image: "/images/visual_diary_1.png", caption: "Bespoke elegance. Custom bookmatched Makrana marble flooring." },
+  { image: "/images/visual_diary_2.png", caption: "Spiritual sanctuary. Intricately carved pure white marble temple." },
+  { image: "/images/visual_diary_3.png", caption: "Contemporary curation. Custom marble vanity with brass accents." },
+  { image: "/images/visual_diary_4.png", caption: "Artisanal wall plaque. Traditional hand-carved tree-of-life motif." },
 ];
 
 export default function HomePage() {

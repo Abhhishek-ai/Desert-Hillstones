@@ -78,7 +78,7 @@ export default function Footer() {
             <div className="flex flex-col gap-4">
               <div className="flex flex-col gap-2">
                 <a 
-                  href="https://instagram.com/deserthillstone" 
+                  href="https://www.instagram.com/desert_hillstone/" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="font-sans text-sm text-ink-muted hover:text-ink transition-colors duration-200"

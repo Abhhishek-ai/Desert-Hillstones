@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Phone, Navigation, Clock, Star } from "lucide-react";
+import { Phone, Navigation, Clock, Star, ArrowRight } from "lucide-react";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
 
 export default function ContactPage() {
@@ -41,6 +41,15 @@ export default function ContactPage() {
                   Mansarovar Sector 8, Mansarovar,<br />
                   Jaipur, Rajasthan 302020
                 </p>
+                <a 
+                  href="https://www.google.com/maps/dir/?api=1&destination=Desert+Hillstones+Mansarovar+Jaipur+Rajasthan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-[11px] text-gold hover:text-gold-deep font-semibold tracking-wider uppercase mt-2.5 transition-colors duration-200"
+                >
+                  Get Directions
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </a>
               </div>
             </div>
 
@@ -97,8 +106,12 @@ export default function ContactPage() {
 
         </div>
 
-        {/* Right: Map Embedding (7 cols) */}
-        <div className="lg:col-span-7 relative border border-solid border-border rounded-sm overflow-hidden min-h-[300px] bg-surface-warm">
+        <a 
+          href="https://www.google.com/maps/dir/?api=1&destination=Desert+Hillstones+Mansarovar+Jaipur+Rajasthan"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="lg:col-span-7 relative border border-solid border-border rounded-sm overflow-hidden min-h-[300px] bg-surface-warm group block"
+        >
           {/* Desaturated Google Map Iframe */}
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.88200676443!2d75.7618!3d26.8523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db5dc49bbbbbb%3A0xbbbbbbbbbbbbbbbb!2sMansarovar%2C%20Jaipur%2C%20Rajasthan%20302020!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
@@ -108,10 +121,17 @@ export default function ContactPage() {
             allowFullScreen={false}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            className="w-full h-full desaturated-map min-h-[380px]"
+            className="w-full h-full desaturated-map min-h-[380px] pointer-events-none"
             title="Desert Hillstone location map"
           />
-        </div>
+          {/* Hover overlay badge */}
+          <div className="absolute inset-0 bg-ink/5 group-hover:bg-ink/0 transition-colors duration-300 flex items-center justify-center pointer-events-none">
+            <span className="bg-surface px-4 py-2.5 text-xs tracking-wider uppercase font-semibold text-ink shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 border border-solid border-border flex items-center gap-2">
+              Open in Google Maps
+              <ArrowRight className="w-3.5 h-3.5 text-gold" />
+            </span>
+          </div>
+        </a>
       </div>
     </div>
   );

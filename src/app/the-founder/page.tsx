@@ -69,6 +69,7 @@ export default function FounderPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5, ease: EASE_PREMIUM }}
+              className="flex flex-wrap gap-4"
             >
               <Magnetic>
                 <a
@@ -79,6 +80,22 @@ export default function FounderPage() {
                 >
                   Connect Directly With Nemi
                   <ArrowRight className="w-4 h-4" />
+                </a>
+              </Magnetic>
+
+              <Magnetic>
+                <a
+                  href="https://www.instagram.com/nemi_choudhary_makrana/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-8 py-4.5 border border-solid border-ink-muted text-ink-muted hover:border-ink hover:text-ink text-xs tracking-widest uppercase font-semibold transition-all duration-300 inline-flex items-center gap-2.5"
+                >
+                  Instagram Profile
+                  <svg className="w-4 h-4 fill-none stroke-current" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                  </svg>
                 </a>
               </Magnetic>
             </motion.div>
@@ -102,20 +119,7 @@ export default function FounderPage() {
               />
             </motion.div>
             
-            {/* Visual overlay tag */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
-              className="absolute -top-6 -right-6 bg-surface p-6 shadow-lg border border-solid border-border max-w-[240px] hidden md:block"
-            >
-              <span className="text-[10px] font-bold tracking-[0.2em] text-gold uppercase block mb-1">
-                Heritage Studio
-              </span>
-              <p className="text-xs text-ink-muted leading-relaxed">
-                Directly overseeing procurement from Makrana and global quarries.
-              </p>
-            </motion.div>
+
           </div>
         </div>
       </section>
