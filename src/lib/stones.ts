@@ -1,7 +1,7 @@
 export interface Stone {
   slug: string;
   name: string;
-  category: 'makrana-pure-white' | 'albeta' | 'dungri' | 'premium-granite' | 'home-temples' | 'premium-tiles' | 'bathroom-vanities' | 'handicraft-marble-art';
+  category: 'makrana-pure-white' | 'makrana-marble' | 'premium-granite' | 'home-temples' | 'premium-tiles' | 'bathroom-vanities' | 'handicraft-marble-art';
   categoryLabel: string;
   origin: string;
   description: string;
@@ -33,10 +33,58 @@ export const STONES: Stone[] = [
     images: ["/images/makrana_white_1.jpg", "/images/makrana_white_2.jpg", "/images/makrana_white_3.jpg"]
   },
   {
+    slug: "makrana-white-abalone-inlay",
+    name: "Makrana White with Abalone Inlay",
+    category: "makrana-pure-white",
+    categoryLabel: "Makrana pure white",
+    origin: "Makrana, Rajasthan",
+    description: "Selected Makrana Pure White marble tiles accented with delicate, shimmering abalone shell inlay borders, creating a luxurious and reflective flooring pattern.",
+    story: "This bespoke flooring combines the natural purity of Makrana White with the iridescent brilliance of mother-of-pearl. Each inlay is meticulously hand-carved and laid by master craftsmen to catch light from every angle.",
+    color: "Pristine White with Iridescent Shell Highlights",
+    colorHex: "#F2F4F7",
+    finishes: ["Polished"],
+    applications: ["Flooring", "Feature Walls", "Living Rooms"],
+    density: "2.73 g/cm³",
+    porosity: "0.11%",
+    images: ["/images/pure_white_enhanced_1_1.png", "/images/pure_white_enhanced_1_2.png"]
+  },
+  {
+    slug: "classic-diagonal-marble-floor",
+    name: "Classic Diagonal Marble Floor Layout",
+    category: "makrana-pure-white",
+    categoryLabel: "Makrana pure white",
+    origin: "Makrana, Rajasthan",
+    description: "A timeless diagonal diamond layout using selected Makrana Pure White marble tiles bordered with black marble lining and dot accents.",
+    story: "Perfect for hallways and grand entrance corridors, this pattern creates a visual sense of expansion. The deep black contrast highlights the clean crystalline whiteness of the Makrana tiles.",
+    color: "Crystalline White with Charcoal Black Accents",
+    colorHex: "#EDEFEF",
+    finishes: ["Polished", "Honed"],
+    applications: ["Hallways", "Corridors", "Foyers"],
+    density: "2.73 g/cm³",
+    porosity: "0.12%",
+    images: ["/images/pure_white_enhanced_2.png"]
+  },
+  {
+    slug: "makrana-pure-white-slabs",
+    name: "Makrana Pure White Slab Selection",
+    category: "makrana-pure-white",
+    categoryLabel: "Makrana pure white",
+    origin: "Makrana, Rajasthan",
+    description: "Premium large-format slabs of Makrana Pure White marble, hand-selected at our yard for flawless consistency and light transmission.",
+    story: "These premium-grade slabs are kept in our atelier yard for architects and designers to inspect. Selected for their high calcium content, they represent the absolute peak of geologic purity and historic legacy.",
+    color: "Pure Luminous White",
+    colorHex: "#FAFAFA",
+    finishes: ["Polished", "Honed"],
+    applications: ["Flooring", "Grand Kitchens", "Feature Walls", "Sculptures"],
+    density: "2.73 g/cm³",
+    porosity: "0.10%",
+    images: ["/images/pure_white_enhanced_3_1.png", "/images/pure_white_enhanced_3_2.png"]
+  },
+  {
     slug: "makrana-albeta-premium",
     name: "Albeta Premium Marble",
-    category: "albeta",
-    categoryLabel: "Albeta",
+    category: "makrana-marble",
+    categoryLabel: "Makrana Marble",
     origin: "Makrana, Rajasthan",
     description: "A legendary variety characterized by its milky white background overlaid with soft grey veins and golden-brown highlights.",
     story: "Albeta marble is the connoisseur's choice. Each slab tells a quiet geologic story of Rajasthan, displaying structural integrity that allows it to be laid in grand book-matched layouts.",
@@ -51,8 +99,8 @@ export const STONES: Stone[] = [
   {
     slug: "makrana-dungri-premium",
     name: "Dungri Premium Marble",
-    category: "dungri",
-    categoryLabel: "Dungri",
+    category: "makrana-marble",
+    categoryLabel: "Makrana Marble",
     origin: "Makrana, Rajasthan",
     description: "A highly durable and classical Makrana variety featuring a signature warm grey background patterned with cross-veining.",
     story: "Dungri is renowned for its resilience and historic popularity in traditional Indian courts. It brings a grounded, natural warmth to large flooring projects.",
@@ -145,20 +193,84 @@ export const STONES: Stone[] = [
     images: ["/images/granite_white_new.jpg"]
   },
   {
-    slug: "makrana-white-home-temple",
-    name: "Makrana White Home Temple",
+    slug: "makrana-white-temple-cabinet",
+    name: "Makrana White Temple Cabinet",
     category: "home-temples",
     categoryLabel: "Home temples",
     origin: "Makrana, Rajasthan",
-    description: "A hand-carved home mandir, intricately crafted by master artisans in pure Makrana white marble, featuring traditional jaali work.",
-    story: "Carved from block marble selected for spiritual purity, this sanctuary features custom pillars and delicate lattice patterns that play beautifully with interior lighting.",
+    description: "A hand-carved white marble home temple cabinet featuring ornate columns, gold painted leaf carvings, and drawer storage at the bottom.",
+    story: "Intricately designed for modern residences, this elegant cabinet mandir combines traditional Indian stone carvings with functional wooden and marble drawers.",
     color: "Pure Translucent White",
     colorHex: "#FFFFFF",
     finishes: ["Polished"],
     applications: ["Pooja Rooms", "Bespoke Artworks"],
     density: "2.73 g/cm³",
     porosity: "0.10%",
-    images: ["/images/temple_4.jpg", "/images/temple_1.jpg", "/images/temple_2.jpg", "/images/temple_3.jpg"]
+    images: ["/images/temple_enhanced_1.png"]
+  },
+  {
+    slug: "grand-triple-arch-villa-temple",
+    name: "Grand Triple-Arch Villa Temple",
+    category: "home-temples",
+    categoryLabel: "Home temples",
+    origin: "Makrana, Rajasthan",
+    description: "A large, luxury white marble temple designed for grand villa spaces, featuring three sculpted arches, carved pillars, and built-in lighting.",
+    story: "Crafted to fit double-height living rooms or dedicated pooja spaces, this monumental structure is built from fine Makrana marble with custom arched backdrops for deities.",
+    color: "Pure Translucent White",
+    colorHex: "#FFFFFF",
+    finishes: ["Polished"],
+    applications: ["Pooja Rooms", "Bespoke Artworks"],
+    density: "2.73 g/cm³",
+    porosity: "0.10%",
+    images: ["/images/temple_enhanced_2.png"]
+  },
+  {
+    slug: "backlit-jaali-mandala-temple-niche",
+    name: "Backlit Jaali Mandala Temple Niche",
+    category: "home-temples",
+    categoryLabel: "Home temples",
+    origin: "Makrana, Rajasthan",
+    description: "A modern white marble temple niche featuring intricate geometric jaali (lattice) screens, a central backlit circular 'Om' mandala, and elephant bases.",
+    story: "Designed to create a serene, ambient focal point, this wall-mounted or recessed mandir glows softly from within, highlighting the intricate geometric carvings and lotus basin.",
+    color: "Pure Translucent White",
+    colorHex: "#FFFFFF",
+    finishes: ["Polished"],
+    applications: ["Pooja Rooms", "Bespoke Artworks"],
+    density: "2.73 g/cm³",
+    porosity: "0.10%",
+    images: ["/images/temple_enhanced_3.png"]
+  },
+  {
+    slug: "royal-peacock-tiered-mandir",
+    name: "Royal Peacock Tiered Mandir",
+    category: "home-temples",
+    categoryLabel: "Home temples",
+    origin: "Makrana, Rajasthan",
+    description: "A multi-tiered white marble mandir featuring custom step display shelves, detailed pillars, and a top arch decorated with green and gold peacock reliefs.",
+    story: "Adorned with the national bird of India in traditional gold-painted relief, this tiered sanctuary provides multiple levels for deities with cabinets at the base.",
+    color: "Pure Translucent White",
+    colorHex: "#FFFFFF",
+    finishes: ["Polished"],
+    applications: ["Pooja Rooms", "Bespoke Artworks"],
+    density: "2.73 g/cm³",
+    porosity: "0.10%",
+    images: ["/images/temple_enhanced_4.png"]
+  },
+  {
+    slug: "four-pillar-canopy-mandir-console",
+    name: "Four-Pillar Canopy Mandir Console",
+    category: "home-temples",
+    categoryLabel: "Home temples",
+    origin: "Makrana, Rajasthan",
+    description: "A luxury home temple featuring a massive white marble carved archway canopy supported by four columns and a backlit 'Om' symbol over a wooden console.",
+    story: "Merging the warmth of natural wood with the cold purity of Makrana marble, this custom-built design creates a peaceful temple pavilion in open layouts.",
+    color: "Pure Translucent White",
+    colorHex: "#FFFFFF",
+    finishes: ["Polished"],
+    applications: ["Pooja Rooms", "Bespoke Artworks"],
+    density: "2.73 g/cm³",
+    porosity: "0.10%",
+    images: ["/images/temple_enhanced_5.png"]
   },
   {
     slug: "premium-porcelain-slabs",
@@ -309,8 +421,7 @@ export const STONES: Stone[] = [
 export const CATEGORIES = [
   { id: 'all', label: 'All' },
   { id: 'makrana-pure-white', label: 'Makrana pure white' },
-  { id: 'albeta', label: 'Albeta' },
-  { id: 'dungri', label: 'Dungri' },
+  { id: 'makrana-marble', label: 'Makrana Marble' },
   { id: 'premium-granite', label: 'premium granite' },
   { id: 'home-temples', label: 'Home temples' },
   { id: 'premium-tiles', label: 'premium tiles' },

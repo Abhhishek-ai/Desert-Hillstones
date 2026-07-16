@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
     "",
     "/collections",
+    "/instagram",
     "/the-founder",
     "/our-legacy",
     "/consultation",

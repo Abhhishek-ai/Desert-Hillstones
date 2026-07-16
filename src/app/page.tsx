@@ -19,8 +19,8 @@ const COLLECTIONS = [
     className: "lg:col-span-3 lg:h-[480px] h-[360px]",
   },
   {
-    title: "Albeta",
-    category: "albeta",
+    title: "Makrana Marble",
+    category: "makrana-marble",
     image: "/images/albeta_1.jpg",
     className: "lg:col-span-3 lg:h-[480px] h-[360px]",
   },
@@ -31,12 +31,6 @@ const COLLECTIONS = [
     className: "lg:col-span-6 lg:h-[480px] h-[360px]",
   },
   {
-    title: "Dungri",
-    category: "dungri",
-    image: "/images/dungri_1.jpg",
-    className: "lg:col-span-3 lg:h-[440px] h-[360px]",
-  },
-  {
     title: "premium granite",
     category: "premium-granite",
     image: "/images/granite_1.jpg",
@@ -45,7 +39,7 @@ const COLLECTIONS = [
   {
     title: "Home temples",
     category: "home-temples",
-    image: "/images/temple_1.jpg",
+    image: "/images/temple_enhanced_1.png",
     className: "lg:col-span-3 lg:h-[440px] h-[360px]",
   },
   {
@@ -58,7 +52,7 @@ const COLLECTIONS = [
     title: "Handicraft and marble art",
     category: "handicraft-marble-art",
     image: "/images/handicraft_shiva_1.jpg",
-    className: "lg:col-span-12 lg:h-[360px] h-[280px]",
+    className: "lg:col-span-3 lg:h-[440px] h-[360px]",
   },
 ];
 
@@ -100,10 +94,10 @@ const REVIEWS = [
 ];
 
 const INSTAGRAM_POSTS = [
-  { image: "/images/visual_diary_1.png", caption: "Bespoke elegance. Custom bookmatched Makrana marble flooring." },
-  { image: "/images/visual_diary_2.png", caption: "Spiritual sanctuary. Intricately carved pure white marble temple." },
-  { image: "/images/visual_diary_3.png", caption: "Contemporary curation. Custom marble vanity with brass accents." },
-  { image: "/images/visual_diary_4.png", caption: "Artisanal wall plaque. Traditional hand-carved tree-of-life motif." },
+  { image: "/images/gallery_1.jpg", caption: "Premium Tiles. Exhibition of refined architectural tiling slabs in various stone textures." },
+  { image: "/images/gallery_2.jpg", caption: "Premium Granite. Clean linear perspective of polished granite slabs showing intricate natural patterns." },
+  { image: "/images/gallery_3.jpg", caption: "Premium Granite. Heavy solid slabs of deep black polished granite loaded in our yard." },
+  { image: "/images/gallery_4.jpg", caption: "Premium Stones. Exquisite round marble plaque hand-painted with a traditional peacock design." },
 ];
 
 export default function HomePage() {
@@ -521,9 +515,12 @@ export default function HomePage() {
           {/* Instagram Crop Grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             {INSTAGRAM_POSTS.map((post, idx) => (
-              <div
+              <a
                 key={idx}
-                className="group relative aspect-square overflow-hidden rounded-sm bg-surface-warm border border-solid border-border cursor-pointer"
+                href="https://www.instagram.com/desert_hillstone/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative aspect-square overflow-hidden rounded-sm bg-surface-warm border border-solid border-border cursor-pointer block"
               >
                 <Image
                   src={post.image}
@@ -532,14 +529,25 @@ export default function HomePage() {
                   className="object-cover transition-transform duration-700 ease-premium group-hover:scale-105"
                   sizes="(max-width: 768px) 50vw, 25vw"
                 />
-                {/* Minimal Overlay with caption */}
+                {/* Minimal Overlay */}
                 <div className="absolute inset-0 bg-ink/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-6 text-center">
-                  <p className="text-xs text-surface font-sans leading-relaxed">
-                    {post.caption}
-                  </p>
+                  <span className="text-xs tracking-wider font-semibold uppercase text-gold">
+                    View on Instagram →
+                  </span>
                 </div>
-              </div>
+              </a>
             ))}
+          </div>
+
+          {/* View Dedicated Gallery CTA */}
+          <div className="mt-12 flex justify-center">
+            <Link
+              href="/instagram"
+              className="inline-flex items-center gap-2 text-sm tracking-widest font-semibold uppercase text-ink hover:text-gold transition-colors duration-200 group"
+            >
+              View Dedicated Gallery
+              <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-200" />
+            </Link>
           </div>
         </div>
       </section>
